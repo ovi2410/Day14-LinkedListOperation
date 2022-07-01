@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LinkedList
-{ 
+{
     internal class Node
     {
         public int data; //instance variable
@@ -15,5 +15,6 @@ namespace LinkedList
         {
             this.data = data;   // init of instance variable
         }
+
     }
 }
