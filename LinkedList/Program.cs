@@ -11,6 +11,6 @@ list.Append(30);
 list.Append(70);
 Console.WriteLine("\n>>> Before Pop :-");
 list.Display();
-list.Pop();
-Console.WriteLine("\n>>> After Pop :- ");
+list.PopLast();
+Console.WriteLine("\n>>> After PopLast :- ");
 list.Display();
