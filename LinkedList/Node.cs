@@ -15,5 +15,6 @@ namespace LinkedList
         {
             this.data = data;   // init of instance variable
         }
+
     }
 }
