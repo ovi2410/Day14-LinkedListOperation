@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinkedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,15 +38,16 @@ namespace LinkedList
 
         public void Append(int data)
         {
-
-            Node node = new Node(data);
-
             if (this.head == null)
             {
-                this.head = node;
+                Console.WriteLine("\n>> Sorry can not perform append Operation as Your Linked List is Empty!!!..\n");
+
             }
+
             else
             {
+                Node node = new Node(data);
+
                 Node temp = head;
 
                 while (temp.next != null)
@@ -55,10 +57,10 @@ namespace LinkedList
                 }
                 temp.next = node;
 
+
+                Console.WriteLine(">>> {0} is appended to LinkedList...", data);
+
             }
-
-            Console.WriteLine(">>> {0} is appended to LinkedList...", data);
-
 
         }
 
@@ -122,6 +124,26 @@ namespace LinkedList
             }
             newNode.next = null;
             return head;
+        }
+
+        public Node SearchTestCase(int value)
+        {
+            Console.WriteLine("\n>> Serching For Element {0}... .. .", value);
+
+            Node temp = this.head;
+            int count = 0;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("\n>>> Element Found in LinkedList :- Position = {0} , Value = {1} ", count, value);
+                    return temp;
+                }
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("\n>> Element not found in LinkedList!!!..");
+            return default;
         }
 
         internal void Display()
