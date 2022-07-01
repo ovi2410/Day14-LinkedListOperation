@@ -34,6 +34,7 @@ namespace LinkedList
             Console.WriteLine(">>> {0} is added to LinkedList...", data);
 
         }
+
         public void Append(int data)
         {
 
@@ -100,6 +101,14 @@ namespace LinkedList
             return head;
         }
 
+        internal Node Pop()
+        {
+            if (head == null)
+                return null;
+            head = head.next;
+            return head;
+        }
+
         internal void Display()
         {
             Node temp = this.head;
@@ -123,9 +132,5 @@ namespace LinkedList
 
             }
         }
-
     }
 }
-
-    
-
